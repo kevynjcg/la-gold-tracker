@@ -1258,7 +1258,7 @@ export default function SimpleRaidTracker() {
               Add New Account
             </AlertDialogTitle>
             <AlertDialogDescription>
-              Are you sure you want to add the account <span className="font-semibold">"{newAccountName}"</span>?
+              Are you sure you want to add the account <span className="font-semibold">&quot;{newAccountName}&quot;</span>?
               <p className="mt-2 text-muted-foreground">
                 This will create a new account with the default raids and no characters.
               </p>
