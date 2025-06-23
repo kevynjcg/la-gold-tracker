@@ -6,7 +6,7 @@ import './globals.css'
 import Navigation from './components/Navigation'
 import HomePage from './page'
 import DarkModeToggle from './components/darkmode'
-import SignUpSignIn from './components/signupsignin'
+
 
 import {
   ClerkProvider,
@@ -32,7 +32,7 @@ export default function RootLayout({
               <Navigation/>                 
             </SignedIn>
             <SignedOut>
-              <SignUpSignIn/>
+      
             </SignedOut>  
             <main className="app-main">
               <HomePage/>

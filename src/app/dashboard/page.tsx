@@ -268,7 +268,6 @@ export default function SimpleRaidTracker() {
     // Set up a timer that checks every minute for reset time
     const timer = setInterval(() => {
 
-      const nextReset = getNextWednesday6PM()
 
       // Check if we've passed the reset time and haven't reset yet
       if (shouldReset()) {

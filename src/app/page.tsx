@@ -6,7 +6,7 @@ import { useUser } from '@clerk/nextjs';
 
 
 export default function HomePage() {
-  const { user, isSignedIn, isLoaded } = useUser();
+  const { isSignedIn, isLoaded } = useUser();
   const router = useRouter();
   const pathname = usePathname()
 

@@ -38,7 +38,7 @@ export default function Navigation() {
     console.log(`Navigating to ${buttonName}`)
     }
 
-    const { user, isLoaded } = useUser()
+    const { user } = useUser()
     const role = user?.publicMetadata?.role
 
     return (
