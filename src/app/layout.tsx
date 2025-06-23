@@ -1,7 +1,7 @@
 'use client'
 
-import type { Metadata } from 'next'
-import { useEffect, useState } from 'react'
+
+
 import './globals.css'
 import Navigation from './components/Navigation'
 import HomePage from './page'
@@ -10,13 +10,9 @@ import SignUpSignIn from './components/signupsignin'
 
 import {
   ClerkProvider,
-  SignInButton,
-  SignUpButton,
   SignedIn,
   SignedOut,
-  UserButton,
-  useUser,
-  SignIn,
+
 } from '@clerk/nextjs'
 
 export default function RootLayout({
@@ -32,11 +28,17 @@ export default function RootLayout({
       <html lang="en">
         <body>
           <div className="app-layout">
-
+            <SignedIn>
               <Navigation/>                 
-
+            </SignedIn>
+            <SignedOut>
+              <SignUpSignIn/>
+            </SignedOut>  
             <main className="app-main">
+              <HomePage/>
+              <SignedIn>
                 {children}
+              </SignedIn>
             </main>
           </div>
           <DarkModeToggle/>

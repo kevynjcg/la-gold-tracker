@@ -1,9 +1,7 @@
 'use client'
 
-import { useUser, SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from '@clerk/nextjs'
-import Link from 'next/link'
-import DarkMode from './darkmode'
-import { useRouter } from 'next/navigation'
+import { useUser, SignInButton, SignUpButton } from '@clerk/nextjs'
+
 
 export default function SignUpSignIn() {
   const { user, isLoaded } = useUser()

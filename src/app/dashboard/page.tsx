@@ -56,13 +56,7 @@ interface GoldHistoryEntry {
   grandTotal: number
 }
 
-const initialRaids: Raid[] = [
-  { id: "1", name: "Molten Core", goldReward: 250 },
-  { id: "2", name: "Blackwing Lair", goldReward: 350 },
-  { id: "3", name: "Karazhan", goldReward: 300 },
-  { id: "4", name: "Black Temple", goldReward: 600 },
-  { id: "5", name: "Sunwell Plateau", goldReward: 750 },
-]
+
 
 export default function SimpleRaidTracker() {
   const [accounts, setAccounts] = useState<Account[]>([])
@@ -273,7 +267,7 @@ export default function SimpleRaidTracker() {
 
     // Set up a timer that checks every minute for reset time
     const timer = setInterval(() => {
-      const now = new Date()
+
       const nextReset = getNextWednesday6PM()
 
       // Check if we've passed the reset time and haven't reset yet

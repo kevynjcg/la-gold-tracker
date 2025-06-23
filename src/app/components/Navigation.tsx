@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { useUser, SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from '@clerk/nextjs'
+import { useUser, UserButton } from '@clerk/nextjs'
 import Link from 'next/link'
 import { useRouter, usePathname } from "next/navigation"
 
