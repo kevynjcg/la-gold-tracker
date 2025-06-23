@@ -209,11 +209,12 @@ export default function SimpleRaidTracker() {
         setAccounts(data.accounts || [])
 
         // Ensure all history entries have IDs (for backward compatibility)
-        const historyWithIds = (data.goldHistory || []).map((entry: any, index: number) => ({
+        const historyWithIds = (data.goldHistory || []).map((entry: GoldHistoryEntry, index: number) => ({
           ...entry,
           id: entry.id || `history-${Date.now()}-${index}`,
         }))
 
+        
         setGoldHistory(historyWithIds)
         setLastResetDate(data.lastResetDate || "")
       }
